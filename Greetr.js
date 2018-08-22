@@ -11,6 +11,27 @@
     return new Greetr.init(firstName, lastName, language);
   }
 
+  //  Language support options
+  const supportedLangs = ['en', 'es'];
+
+  //  Greetings object
+  const greetings = {
+    en: 'Hello',
+    es: 'Hola'
+  };
+
+  //  Formal greetings object
+  const formalGreetings = {
+    en: 'Greetings',
+    es: 'Saludos'
+  };
+
+  //  Log In messages object
+  const logMessages = {
+    en: 'Logged in',
+    es: 'Inicio sesion'
+  }
+
   //  Create the prototype object for Greetr
   Greetr.prototype = {};
 
