@@ -16,12 +16,12 @@ If you wish to contribute, feel free to contact me and let's work something out.
 
 ## Version
 
-1.1 - Did minor revisions and updates
-1.0 - Initial Upload
+* **1.1 - Did minor revisions and updates** *-Current version*
+* 1.0 - Initial Upload
 
 ## Authors
 
-* **Robbie Hilado** - *Initial work* - [SopasDigital](https://github.com/sopasdigital)
+**[Robbie Hilado](https://github.com/sopasdigital)**
 
 ## Acknowledgments
 
