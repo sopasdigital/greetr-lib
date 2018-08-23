@@ -102,6 +102,31 @@
       // 'this' being the Greetr object
       // makes this method chainable
       return this;
+    },
+
+    //  Connect jQuery selector to be used by
+    //  our library
+    HTMLGreeting: function(selector, formal) {
+      
+      //  Checks if jQuery is active
+      if (!$) {
+        throw 'jQuery is not loaded';
+      }
+
+      // Checks if there is a supplied selector
+      if (!selector) {
+        throw 'Please provide a jQuery selector'
+      }
+
+      //  Invoke 'greet' method
+      this.greet();
+
+      //  Update HTML to show changes
+      $(selector).html(msg);
+
+      // 'this' being the Greetr object
+      // makes this method chainable
+      return this;
     }
   };
 
@@ -116,6 +141,9 @@
     self.firstName = firstName || '';
     self.lastName = lastName || '';
     self.language = language || 'en';
+
+    // Do a validation check upon initialisation
+    self.validate();
   }
 
   //  Any objects created with 'Greetr.init'
