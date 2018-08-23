@@ -61,14 +61,7 @@
 
     // Greet method
     greet: function(formal) {
-      let msg;
-
-      //  If undefined or null, this will be coerced to 'false'
-      if (formal) {
-        msg = this.formalGreeting();
-      } else {
-        msg = this.greeting();
-      }
+      const msg = this.greetType(formal);
 
       // if this is invoked via console, log it
       if (console) {
@@ -118,14 +111,9 @@
         throw 'Please provide a jQuery selector'
       }
 
-      let msg;
-
-      //  If undefined or null, this will be coerced to 'false'
-      if (formal) {
-        msg = this.formalGreeting();
-      } else {
-        msg = this.greeting();
-      }
+      //  Invoke 'greetType' function and
+      //  assign it to a variable
+      const msg = this.greetType(formal);
 
       //  Update HTML to show changes
       $(selector).html(msg);
@@ -133,6 +121,22 @@
       // 'this' being the Greetr object
       // makes this method chainable
       return this;
+    },
+
+    //  Chooses which greeting type is going
+    //  to be used by the library
+    greetType: function(formal) {
+      let message;
+
+      //  If undefined or null, this will be coerced to 'false'
+      if (formal) {
+        message = this.formalGreeting();
+      } else {
+        message = this.greeting();
+      }
+
+      //  returns the approriate message type
+      return message;
     }
   };
 
