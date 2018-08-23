@@ -118,8 +118,14 @@
         throw 'Please provide a jQuery selector'
       }
 
-      //  Invoke 'greet' method
-      this.greet();
+      let msg;
+
+      //  If undefined or null, this will be coerced to 'false'
+      if (formal) {
+        msg = this.formalGreeting();
+      } else {
+        msg = this.greeting();
+      }
 
       //  Update HTML to show changes
       $(selector).html(msg);
